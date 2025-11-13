@@ -4,9 +4,8 @@ export const Navbar = () => {
     return (
 
         <AppBar sx={{
-             backgroundColor: "navy",
-            // backgroundColor: "white",
-            pt: 3, pb: 3
+             backgroundColor: "#020241ff",
+            pt: 3, pb: 3 , 
         }}>
             <Toolbar sx={{ display: "flex", gap: 60, }}>
                 <Typography sx={{ pl: 5, fontSize: 25, }}>Portfolio</Typography>
