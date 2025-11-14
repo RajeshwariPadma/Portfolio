@@ -129,7 +129,7 @@ export const Skills = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignContent: "center",
-                pb: 10
+                pb: 6
             }}>
                 <Typography sx={{
                     color: "white",
