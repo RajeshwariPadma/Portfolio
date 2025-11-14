@@ -14,10 +14,7 @@ export const Navbar = () => {
                     gap: 4,
                     cursor: "pointer",
                     // color: "black",
-
-
-
-                }}>
+                 }}>
                    
 
                     {["Home", "About", "Skills", "Projects", "Contact Me"].map((text) => (
