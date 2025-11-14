@@ -4,29 +4,10 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import backgroundphoto from "../assets/backgroundphoto.jpg";
-import { keyframes } from "@mui/material";
+import { Button } from "@mui/material";
 
-export const Home = () => {
-    const boxShadow = keyframes`
-    0% {
-     boxShadow: 0 0 10px #00ffff,
-                0 0 20px #00ffff,
-                0 0 40px #00ffff,
-                
-    },
-     50% {
-     boxShadow: 
-                0 0 20px #00ffff,
-                0 0 40px #00ffff,
-                0 0 80px #00ffff,
-    },
-     100% {
-     boxShadow: 
-                
-                0 0 40px #00ffff,
-                0 0 80px #00ffff,
-                0 0 100px #00ffff,
-    }`
+export const Header = () => {
+   
     return (
         <Box sx={{
             pt: 20,
@@ -38,7 +19,7 @@ export const Home = () => {
             <Box sx={{ display: "flex", flexDirection: "column", px: 15, py: 15 }}>
                 <Typography sx={{ fontWeight: "bold", fontSize: 30 }}>Hello , It's Me</Typography>
                 <Typography sx={{ fontWeight: "bold", fontSize: 50 }}>Rajeshwari Padma</Typography>
-                <Typography gutterBottom sx={{ fontWeight: "bold", fontSize: 30, display: "flex" }}>And I'm a   <Typography gutterBottom sx={{ fontWeight: "bold", fontSize: 30, pl: 2, color: " rgba(4, 231, 231, 0.93)" }}> Frontend Developer </Typography> </Typography>
+                <Typography gutterBottom sx={{ fontWeight: "bold", fontSize: 30, display: "flex" }}>And I'm a <Typography gutterBottom sx={{ fontWeight: "bold", fontSize: 30, pl: 2, color: " rgba(4, 231, 231, 0.93)" }}> Frontend Developer </Typography> </Typography>
                 <Typography >I'm a Software Developer with extensive experience for over 1.5 years. <br></br>
                     Expertise is to create and website design , Frontend design and <br></br>
                     many more....</Typography>
@@ -77,6 +58,21 @@ export const Home = () => {
                     ))}
 
                 </Box>
+                <Box sx={{
+                        pt : 8}}>
+                    <Button sx={{
+                        width : 150,
+                        height: 30,
+                         boxShadow: `0 0 10px #00ffff,
+                                    0 0 20px #00ffff`,
+                        borderRadius: 30,
+                        backgroundColor : "#00ffff",
+                        fontWeight : "bold",
+                        color : "black" , 
+                        p : 1}}>
+                        More About Me
+                    </Button>
+                </Box>
             </Box>
             <Box sx={{ py: 15, px: 6 }}>
                 <Box component="img"
@@ -95,7 +91,7 @@ export const Home = () => {
                                     0 0 60px #1de3f9ff,
                                     0 0 70px #f38080ff ,
                                      0 0 80px #f38080ff`
-                        // animation: `${boxShadow} 5s ease-in-out infinite`
+                       
                     }}></Box>
             </Box>
         </Box>
