@@ -26,74 +26,143 @@ export const LatestProjects = () => {
         }
     ]
     return (
+
+        // sx={(theme) => ({
+        //     [theme.breakpoints.up("md")]: {
+
+        //     },
+        //     [theme.breakpoints.down("sm")]: {
+
+        //     }
+        // })}
         <Box>
-            <Box sx={{}}>
-                <Typography sx={{
-                    color: "white",
-                    fontSize: 40,
-                    fontWeight: " bold",
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: 1,
-                    justifyContent: "center",
-                    alignContent: "center",
-                    pb: 10
-                }} >Latest <Typography sx={{
-                    color: " #00ffff",
-                    fontSize: 40,
-                    fontWeight: " bold",
-                    display: "flex", flexDirection: "row"
-                }}>Projects</Typography></Typography>
+            <Box >
+                <Typography
+                    sx={(theme) => ({
+                        [theme.breakpoints.up("md")]: {
+                            color: "white",
+                            fontSize: 40,
+                            fontWeight: " bold",
+                            display: "flex",
+                            flexDirection: "row",
+                            gap: 1,
+                            justifyContent: "center",
+                            alignContent: "center",
+                            pb: 10
+                        },
+                        [theme.breakpoints.down("sm")]: {
+                            color: "white",
+                            fontSize: 30,
+                            fontWeight: " bold",
+                            display: "flex",
+                            flexDirection: "row",
+                            gap: 1,
+                            justifyContent: "center",
+                            alignContent: "center",
+                            pb: 10
+                        }
+                    })}>Latest <Typography
+                        sx={(theme) => ({
+                            [theme.breakpoints.up("md")]: {
+                                color: " #00ffff",
+                                fontSize: 40,
+                                fontWeight: " bold",
+                                display: "flex", flexDirection: "row"
+                            },
+                            [theme.breakpoints.down("sm")]: {
+                                color: " #00ffff",
+                                fontSize: 30,
+                                fontWeight: " bold",
+                                display: "flex", flexDirection: "row"
+                            }
+                        })}>Projects</Typography></Typography>
             </Box>
-            <Box sx={{
-                display: "flex",
-                flexDirection: "row",
-                gap: 10,
-                pb: 10,
-                justifyContent: "center",
-                alignContent: "center",
-                cursor : "pointer",
-                counterIncrement : 50
-            }}>
+            <Box
+                sx={(theme) => ({
+                    [theme.breakpoints.up("md")]: {
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: 10,
+                        pb: 10,
+                        justifyContent: "center",
+                        alignContent: "center",
+                        cursor: "pointer",
+                        counterIncrement: 50
+                    },
+                    [theme.breakpoints.down("sm")]: {
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 10,
+                        pb: 10,
+                        justifyContent: "center",
+                        alignContent: "center",
+                        cursor: "pointer",
+                        counterIncrement: 50,
+                        pl: 15
+                    }
+                })}>
 
                 {project.map((item, index) => (
-                    <Card elevation={3} key={index} sx={{
-                        borderRadius: 10,
-                        position: "relative",
-                        overflow: "hidden",
+                    <Card elevation={3} key={index}
+                        sx={(theme) => ({
+                            [theme.breakpoints.up("md")]: {
+                                borderRadius: 10,
+                                position: "relative",
+                                overflow: "hidden",
 
-
-
-                        ":hover .contentBox": {
-                            transform: "translateY(0%)",
-                            opacity: 1
-                        },
-                        ":hover": {
-                            boxShadow: `0 0 10px  #00ffff,
+                                ":hover .contentBox": {
+                                    transform: "translateY(0%)",
+                                    opacity: 1
+                                },
+                                ":hover": {
+                                    boxShadow: `0 0 10px  #00ffff,
                                     0 0 30px  #29e8e8ff,
                                     0 0 50px  #4ddfefff`
-                        },
-                    }}>
+                                },
+                            },
+                            [theme.breakpoints.down("sm")]: {
+                                borderRadius: 10,
+                                position: "relative",
+                                overflow: "hidden",
+                                width : 300 ,
+                                height : 300 ,
+                               
+                                ":hover .contentBox": {
+                                    transform: "translateY(0%)",
+                                    opacity: 1
+                                },
+                                ":hover": {
+                                    boxShadow: `0 0 10px  #00ffff,
+                                    0 0 30px  #29e8e8ff,
+                                    0 0 50px  #4ddfefff`
+                                },
+                            }
+                        })}>
                         <CardMedia component="img"
                             image={item.image}
                             alt={item.title}
                             //    height = {90}
                             //    width = {90}
-                            sx={{
-                                width: 300,
-                                height: 300,
-                                //  position : "relative",
-                            }} />
+                            sx={(theme) => ({
+                                [theme.breakpoints.up("md")]: {
+                                    width: 300,
+                                    height: 300,
+                                },
+                                [theme.breakpoints.down("sm")]: {
+                                    width: 300,
+                                    height: 300,
+                                }
+                            })} />
                         <CardContent
                             className="contentBox"
                             sx={{
                                 color: "white",
                                 display: "flex",
-                                flexWrap  : "nowrap",
+                                flexWrap: "nowrap",
                                 width: 280,
                                 justifyContent: "center",
                                 alignContent: "center",
-                                flexDirection : "column",
+                                flexDirection: "column",
                                 position: "absolute",
                                 bottom: 0,
                                 left: 0,
@@ -104,14 +173,15 @@ export const LatestProjects = () => {
                                 opacity: 0,
                                 transition: "all 0.4s ease-in-out",
                                 textAlign: "center",
-                            }}><CardContent sx={{color : "rgba(184, 72, 8, 0.6)",
-                                fontWeight : "bold",
-                                fontSize : 30,
-                                display : "flex",
-                                justifyContent : "center",
-                                alignContent : "center"
+                            }}><CardContent sx={{
+                                color: "rgba(184, 72, 8, 0.6)",
+                                fontWeight: "bold",
+                                fontSize: 30,
+                                display: "flex",
+                                justifyContent: "center",
+                                alignContent: "center"
                             }}>{item.title} </CardContent> {item.text} </CardContent>
-                            
+
                     </Card>
                 ))}
 
